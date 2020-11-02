@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+{% if article %}
+<h4>{{article.title}}</h4>
+<hr>
+Author : {{article.author}}
+<hr>
+Created Date : {{article.created_date}}
+<hr>
+{{article.content |safe}}
+<hr>
+{% else %}
+<div class = "alert alert-secondary">Böyle bir Makale Bulunmuyor...!!!</div>
+
+{% endif %}
+
+{% endblock body %}
